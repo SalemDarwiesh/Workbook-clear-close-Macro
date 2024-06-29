@@ -19,9 +19,8 @@ This repository contains a VBA macro for Excel designed to automate the process 
 ### Workbook BeforeClose Macro
 ```vba
 Private Sub Workbook_BeforeClose(Cancel As Boolean)
-
-    ' Select the "SHEETNAME" sheet
-    Sheets("SHEETNAME").Select
+    ' Select the "AgentPerformance Macro" sheet
+    Sheets("AgentPerformance Macro").Select
 
     ' Check if there is no data in the range A1:AB1
     If WorksheetFunction.CountA(Range("A1:AB1")) = 0 Then
@@ -33,5 +32,4 @@ Private Sub Workbook_BeforeClose(Cancel As Boolean)
         ' Clear the content of all selected cells
         Selection.ClearContents
     End If
-    
 End Sub
